@@ -1,2 +1,63 @@
 /* Estilos generales */
 
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+
+    
+    /* PARA PROBAR */
+    height: 200px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+header {
+
+    /* PARA PROBAR */
+    width: 3%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+
+    /* PARA PROBAR */
+    width: 97%;
+
+
+
+}
+
+.contenedor-central {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contenedor-individual {
+
+
+    /* PARA PROBAR */
+    background-color: darkkhaki;
+    border: solid black 1px;
+    width: 33%;
+}
+
+#navegacion-secundaria {
+    flex-grow: 100%;
+    width: 100%;
+
+
+    /* PARA PROBAR */
+    background-color: blue;
+    border: solid black 1px;
+
+
+}
+
+
