@@ -11,14 +11,16 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/estilos_generales.css" />
+    <link rel="stylesheet" href="css/estilos_perfil.css" />
+    <link rel="stylesheet" href="css/estilos_index.css" />
     <title>Lorem</title>
   </head>
   <body>
     <header>
-      <button id="Logo">LOGO</button>
-
+      
       <nav id="menu">
+        <button id="Logo">LOGO</button>
         <button class="nav-boton">
             <span class="material-icons">home</span>
         </button>
@@ -79,9 +81,28 @@
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
-        <div class="detalle">
-          <table>
-
+        <div class="detalle"> 
+          <table id="tabla-salud">
+            <tr class="linea-inferior">
+              <th>Tiempo</th>
+              <td><span>14% </span>adelantado</td>
+            </tr>
+            <tr class="linea-inferior">
+              <th>Tareas</th>
+              <td><span>12 </span>tareas completadas</td>
+            </tr>
+            <tr class="linea-inferior">
+              <th>Carga Horaria</th>
+              <td><span>0 </span>tareas vencidas</td>
+            </tr>
+            <tr class="linea-inferior">
+              <th>Progreso</th>
+              <td><span>14% </span>completado</td>
+            </tr>
+            <tr>
+              <th>Costo</th>
+              <td><span>42%</span>debajo del presupuesto</td>
+            </tr>
           </table>
         </div>
       </div>
@@ -96,9 +117,26 @@
           </button>
         </div>
         <div class="detalle">
-          <div class="circulo-exterior">
-            <div class="circulo-interior"></div>
+          <div class="etiquetas-tareas">
+            <p>No empezadas (<span class="tareas-no-empezadas">1</span>)</p>
+            <p>En progreso (<span class="tareas-en-progreso">3</span>)</p>
+            <p>Completadas (<span class="tareas-completadas">8</span>)</p>
           </div>
+
+          <div class="grafico" id="grafico-tareas"> 
+            <span class="tareas-no-empezadas">1</span>
+            <span class="tareas-en-progreso">3</span>
+            <span class="tareas-completadas">8</span>
+            
+            <div class="circulo-exterior">
+              <div class="semi-circulo-1"></div>
+              <div class="semi-circulo-2"></div>
+              <div class="semi-circulo-3"></div>
+              <div class="circulo-interior"></div>
+            </div>
+          </div>
+
+
         </div>
       </div>
       <div class="contenedor-individual">
@@ -111,7 +149,20 @@
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
-        <div class="detalle"></div>
+        <div class="detalle detalle_progreso">
+          <div class="label_progreso">Contratos</div>
+          <progress class="barra-progreso" id="contratos" max="100" value="100"></progress>
+          <label class="label_progreso" for="diseño">Diseño</label>
+          <progress class="barra-progreso" id="diseño" max="100" value="80"></progress>
+          <label class="label_progreso" for="adquisiciones">Adquisiciones</label>
+          <progress class="barra-progreso" id="adquisiciones" max="100" value="19"></progress>
+          <label class="label_progreso" for="construccion">Construcción</label>
+          <progress class="barra-progreso" id="construccion" max="100" value="0"></progress>
+          <label class="label_progreso" for="post_contruccion">Post Construcción</label>
+          <progress class="barra-progreso" id="post_contruccion" max="100" value="0"></progress>
+          <label class="label_progreso" for="fin_proyecto">Finalizacion de Proyecto</label>
+          <progress class="barra-progreso" id="fin_proyecto" max="100" value="0"></progress>
+        </div>
       </div>
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
@@ -123,7 +174,30 @@
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
-        <div class="detalle"></div>
+        <div class="detalle">
+          <table>
+            <TR>
+              <TH>Ventas totales</TH>
+              <TD></TD>
+            </TR>
+            <TR>
+              <TH>Ingreso</TH>
+              <TD></TD>
+            </TR>
+            <TR>
+              <TH>Presupuesto</TH>
+              <TD></TD>
+            </TR>
+            <TR>
+              <TH>Progreso</TH>
+              <TD></TD>
+            </TR>
+            <TR>
+              <TH>Tareas</TH>
+              <TD></TD>
+            </TR>
+          </table>
+        </div>
       </div>
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
@@ -147,8 +221,14 @@
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
-        <div class="detalle"></div>
+        <div class="detalle">
+          
+        </div>
       </div>
+
+
+
+
     </main>
     <footer>
       <p>&copy; Alvarez Marcia Belen - D'Annunzio Stefano - Dominguez Pamela</p>
