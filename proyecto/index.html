@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -18,43 +21,45 @@
   </head>
   <body>
     <header>
-      
       <nav id="menu">
-        <button id="Logo">LOGO</button>
-        <button class="nav-boton">
-            <span class="material-icons">home</span>
-        </button>
-        <button class="nav-boton">
-            <span class="material-icons">schedule</span>
-        </button>
+        <a id="Logo" href="">LOGO</a>
 
-        <hr>
+        <hr class="nav-hr" id="separacion-menu-1" />
 
         <button class="nav-boton">
-            <span class="material-icons">group</span>
+          <span class="material-icons">home</span>
         </button>
         <button class="nav-boton">
-            <span class="material-icons">work_outline</span>
+          <span class="material-icons">schedule</span>
         </button>
 
-        <hr>
+        <hr class="nav-hr" id="separacion-menu-2" />
 
         <button class="nav-boton">
+          <span class="material-icons">group</span>
+        </button>
+        <button class="nav-boton">
+          <span class="material-icons">work_outline</span>
+        </button>
+
+        <!-- OPCIONES DEL PERFIL  -->
+        <div class="opciones-perfil">
+          <button class="nav-boton">
             <span class="material-icons">add</span>
-        </button>
-        <button class="nav-boton">
+          </button>
+
+          <button class="nav-boton">
             <span class="material-icons">help_outline</span>
-        </button>
+          </button>
 
-        <button class="nav-boton">
+          <a href="perfil.html" class="nav-boton">
             <span class="material-icons">account_circle</span>
-        </button>
-
-
+          </a>
+        </div>
       </nav>
     </header>
     <main>
-      <!-- A CONFIRMAR - Barra de navegación "filtro"-->
+      <!-- Barra de navegación "filtro"-->
       <nav id="navegacion-secundaria">
         <button class="boton-nav">
           <span class="material-icons">bar_chart</span>
@@ -81,7 +86,7 @@
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
-        <div class="detalle"> 
+        <div class="detalle">
           <table id="tabla-salud">
             <tr class="linea-inferior">
               <th>Tiempo</th>
@@ -118,16 +123,16 @@
         </div>
         <div class="detalle">
           <div class="etiquetas-tareas">
-            <p>No empezadas (<span class="tareas-no-empezadas">1</span>)</p>
-            <p>En progreso (<span class="tareas-en-progreso">3</span>)</p>
-            <p>Completadas (<span class="tareas-completadas">8</span>)</p>
+            <div class="tareas-no-empezadas circulo-tareas"></div><p>No empezadas (<span class="tareas-no-empezadas">1</span>)</p>
+            <div class="tareas-en-progreso circulo-tareas"></div><p>En progreso (<span class="tareas-en-progreso">3</span>)</p>
+            <div class="tareas-completadas circulo-tareas"></div><p>Completadas (<span class="tareas-completadas">8</span>)</p>
           </div>
 
-          <div class="grafico" id="grafico-tareas"> 
+          <div class="grafico" id="grafico-tareas">
             <span class="tareas-no-empezadas">1</span>
             <span class="tareas-en-progreso">3</span>
             <span class="tareas-completadas">8</span>
-            
+
             <div class="circulo-exterior">
               <div class="semi-circulo-1"></div>
               <div class="semi-circulo-2"></div>
@@ -135,8 +140,6 @@
               <div class="circulo-interior"></div>
             </div>
           </div>
-
-
         </div>
       </div>
       <div class="contenedor-individual">
@@ -151,17 +154,53 @@
         </div>
         <div class="detalle detalle_progreso">
           <div class="label_progreso">Contratos</div>
-          <progress class="barra-progreso" id="contratos" max="100" value="100"></progress>
+          <progress
+            class="barra-progreso"
+            id="contratos"
+            max="100"
+            value="100"
+          ></progress>
           <label class="label_progreso" for="diseño">Diseño</label>
-          <progress class="barra-progreso" id="diseño" max="100" value="80"></progress>
-          <label class="label_progreso" for="adquisiciones">Adquisiciones</label>
-          <progress class="barra-progreso" id="adquisiciones" max="100" value="19"></progress>
+          <progress
+            class="barra-progreso"
+            id="diseño"
+            max="100"
+            value="80"
+          ></progress>
+          <label class="label_progreso" for="adquisiciones"
+            >Adquisiciones</label
+          >
+          <progress
+            class="barra-progreso"
+            id="adquisiciones"
+            max="100"
+            value="19"
+          ></progress>
           <label class="label_progreso" for="construccion">Construcción</label>
-          <progress class="barra-progreso" id="construccion" max="100" value="0"></progress>
-          <label class="label_progreso" for="post_contruccion">Post Construcción</label>
-          <progress class="barra-progreso" id="post_contruccion" max="100" value="0"></progress>
-          <label class="label_progreso" for="fin_proyecto">Finalizacion de Proyecto</label>
-          <progress class="barra-progreso" id="fin_proyecto" max="100" value="0"></progress>
+          <progress
+            class="barra-progreso"
+            id="construccion"
+            max="100"
+            value="0"
+          ></progress>
+          <label class="label_progreso" for="post_contruccion"
+            >Post Construcción</label
+          >
+          <progress
+            class="barra-progreso"
+            id="post_contruccion"
+            max="100"
+            value="0"
+          ></progress>
+          <label class="label_progreso" for="fin_proyecto"
+            >Finalizacion de Proyecto</label
+          >
+          <progress
+            class="barra-progreso"
+            id="fin_proyecto"
+            max="100"
+            value="0"
+          ></progress>
         </div>
       </div>
       <div class="contenedor-individual">
@@ -176,26 +215,26 @@
         </div>
         <div class="detalle">
           <table>
-            <TR>
-              <TH>Ventas totales</TH>
-              <TD></TD>
-            </TR>
-            <TR>
-              <TH>Ingreso</TH>
-              <TD></TD>
-            </TR>
-            <TR>
-              <TH>Presupuesto</TH>
-              <TD></TD>
-            </TR>
-            <TR>
-              <TH>Progreso</TH>
-              <TD></TD>
-            </TR>
-            <TR>
-              <TH>Tareas</TH>
-              <TD></TD>
-            </TR>
+            <tr>
+              <th>Ventas totales</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Ingreso</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Presupuesto</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Progreso</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Tareas</th>
+              <td></td>
+            </tr>
           </table>
         </div>
       </div>
@@ -221,18 +260,15 @@
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
-        <div class="detalle">
-          
-        </div>
+        <div class="detalle"></div>
       </div>
 
 
-
-
     </main>
+
     <footer>
       <p>&copy; Alvarez Marcia Belen - D'Annunzio Stefano - Dominguez Pamela</p>
-      <p></p>
+      <p>Laboratorio de Computación II (TUP) - 2023</p>    
     </footer>
   </body>
 </html>

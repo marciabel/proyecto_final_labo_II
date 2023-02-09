@@ -1,20 +1,8 @@
 /* ESTILOS GENERALES */
 
-/* html {
-    height: 100%;
-} */
-
 body {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
-    min-height: 100vh;
-    position: absolute;
-
-    /* Estilos */
-    margin: 0;
-    padding: 0;
-    color: hsl(204, 22%, 95%);
 }
 
 
@@ -23,9 +11,8 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
-    width:95%;
-    height: 100%; 
+    flex: 1;
+    min-height: 100%;
 
     /* Estilos */
     background-color: hsl(233, 33%, 10%);
@@ -35,45 +22,66 @@ main {
 
 }
 
+/* HEADER Y BARRA DE NAVEGACION PRINCIPAL */
 
 header {
-
-
     display: flex;
     flex-direction: column;
+    flex: 0 0 50px;
 
     /* ESTILOS */
-    background-color: hsl(0, 0%, 0%);
     color: hsl(204, 22%, 95%);
 
     /* PARA PROBAR */
-    width: 5%;
+
 }
 
 #menu {
+    height: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
-
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
+    min-width: 50px;
+
+    /* ESTILOS */
+    background-color:hsl(0, 0%, 0%);
 
 }
 
-#menu > button {
+.nav-boton {
     background-color: transparent;
     border: none;
 
     color: hsl(204, 22%, 95%);
 }
 
-#menu > button:hover {
+.nav-boton > button:hover {
     background-color: hsl(215, 20%, 16%);
     border-radius: 10%;
 }
 
+.nav-hr {
+    min-width: 30px;
+    border: 1px solid hsl(204, 22%, 95%);
+}
+
+.opciones-perfil {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    
+    gap: 8px;
+    justify-content: end;
+    flex-grow: 1;
+}
+
+.nav-boton > .material-icons {
+    font-size: 2.2em;
+}
+
+
+/* BARRA DE NAVEGACION SECUNDARIA - FILTROS DE NAVEGACION */
 
 #navegacion-secundaria {
     display: flex;
@@ -83,7 +91,7 @@ header {
 
     padding: 2px;
     width: 100%;
-    height:fit-content;
+    max-height: 65px;
 
     /* PARA PROBAR */
 
@@ -109,7 +117,7 @@ header {
 .contenedor-individual {
     display: flex;
     flex-direction: column;
-    height:50%;
+    flex: 1;
 
     /* Estilos */
     font-family: 'Archivo', sans-serif;
@@ -120,7 +128,7 @@ header {
 
     /* PARA PROBAR */
 
-    width: 33%;
+    min-width: 30%;
 }
 
 .encabezado-contenedor-individual {
@@ -134,7 +142,7 @@ header {
 .titulo-categoria {
     color: hsl(204, 15%, 98%);
     font-size: 1.5em;
-    margin-right: auto;
+    flex-grow: 1;
 }
 
 .encabezado-contenedor-individual > button {
@@ -161,14 +169,20 @@ header {
 
 footer {
     width: 100%;
-    padding: 1px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    
+    padding: 3px 1px 1px;
+    max-height: fit-content;
+    border: solid hsl(233, 21%, 16%) 1px;
+    background-color: hsl(233, 33%, 10%);
 
+    color: hsl(204, 15%, 50%);
+    font-size: 0.8em;
+    
     /* PARA PROBAR */
-    background-color: aquamarine;
+}
+
+footer>p {
+    text-align: center;
+    line-height: 3px;
 }
 
 
@@ -191,10 +205,33 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: flex-start;
 
     font-size: 0.9em;
 }
+
+div.circulo-tareas {
+    position: relative;
+    top: 14px;
+    left: 9px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12rem;
+
+    background-color: yellow;
+}
+
+div.tareas-no-empezadas {
+    background-color: hsl(213, 10%, 64%);
+}
+
+div.tareas-en-progreso {
+    background-color: hsl(176, 55%, 55%);
+}
+
+div.tareas-completadas{
+    background-color: hsl(119, 52%, 60%);
+}
+
 
 .grafico {
     position: relative;
@@ -214,8 +251,8 @@ footer {
 
 .grafico > span:nth-child(1) {
     position: absolute;
-    top: 141px;
-    left: 225px;
+    top: 143px;
+    left: 236px;
 
     color: hsl(213, 10%, 64%);
 }
@@ -223,7 +260,7 @@ footer {
 .grafico > span:nth-child(2) {
     position: absolute;
     top: 5px;
-    left: 240px;
+    left: 251px;
 
     color: hsl(176, 55%, 55%);
 }
@@ -231,7 +268,7 @@ footer {
 .grafico > span:nth-child(3) {
     position: absolute;
     top: 60px;
-    left: 69px;
+    left: 98px;
 
     color: hsl(119, 52%, 60%);
 }
