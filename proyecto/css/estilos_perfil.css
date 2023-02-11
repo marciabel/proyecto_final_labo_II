@@ -6,6 +6,7 @@ body {
 }
 
 main {
+    width: 70%;
     padding-left: 25px;
     font-family: 'Archivo', sans-serif;
     font-size: 0.9em;
@@ -125,6 +126,7 @@ header {
 
 /* PANEL DETALLES DE PERFIL */
 .perfil-detalles {
+    width: 100%;
     border-radius: 8px;
     background-color: hsl(247, 28%, 52%);
     color: hsl(204, 35%, 87%);
@@ -136,16 +138,57 @@ header {
 .titulo-perfil-detalles {
     font-size: 1.3em;
 }
-
-.parte-superior-perfil-detalles {
+/* CONTENEDOR SUPERIOR DEL PANEL DE FOTOS */
+.contenedor-superior-fotos {
     display: flex;
+    flex-direction: row nowrap;
 }
 
-.icono-usuario-generico {
-    border-radius: 25px;
-    background-color: hsl(247, 28%, 4%);
-    
+/* FOTO DEL USUARIO */
+#foto-usuario {
+    width: 100px;
+    border-radius: 50px;
+    box-shadow: 1px 2px 10px hsl(247, 28%, 15%);
 }
-#usuario {
-    font-size: 3em;
+
+
+
+/* CONTENEDOR DE BOTONES PARA CAMBIAR FOTO */
+.contenedor-secundario-fotos {
+    display: flex;
+    flex-direction: row wrap;
+    
+
+}
+
+
+.boton-destacado {
+    display: flex;
+    align-items: center;
+    margin: auto 15px auto 15px;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: hsl(303, 13%, 14%);
+}
+
+.boton-bordeado {
+    display: flex;
+    align-items: center;
+    margin: auto 15px auto 15px;
+    padding: 15px;
+    border: 2px solid;
+    border-color: hsl(303, 13%, 14%);
+    border-radius: 25px;
+    background-color: hsl(247, 28%, 52%);
+    color: hsl(303, 13%, 14%);
+}
+
+.boton-bordeado:hover {
+    display: flex;
+    align-items: center;
+    margin: auto 15px auto 15px;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: hsl(303, 13%, 14%);
+    color: hsl(204, 35%, 87%);;
 }
