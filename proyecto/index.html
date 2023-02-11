@@ -15,44 +15,43 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/estilos_generales.css" />
-    <link rel="stylesheet" href="css/estilos_perfil.css" />
     <link rel="stylesheet" href="css/estilos_index.css" />
     <title>Lorem</title>
   </head>
   <body>
     <header>
       <nav id="menu">
-        <a id="Logo" href="">LOGO</a>
+        <a id="logo" href="index.html"><img src="img/logo.png" alt="Logo de 'LOREM'"></a>
 
         <hr class="nav-hr" id="separacion-menu-1" />
 
-        <button class="nav-boton">
+        <button class="nav-boton" title="Inicio">
           <span class="material-icons">home</span>
         </button>
-        <button class="nav-boton">
+        <button class="nav-boton" title="Horarios">
           <span class="material-icons">schedule</span>
         </button>
 
         <hr class="nav-hr" id="separacion-menu-2" />
 
-        <button class="nav-boton">
+        <button class="nav-boton" title="Equipos">
           <span class="material-icons">group</span>
         </button>
-        <button class="nav-boton">
+        <button class="nav-boton" title="Trabajo">
           <span class="material-icons">work_outline</span>
         </button>
 
         <!-- OPCIONES DEL PERFIL  -->
         <div class="opciones-perfil">
-          <button class="nav-boton">
+          <button class="nav-boton" title="Agregar contacto">
             <span class="material-icons">add</span>
           </button>
 
-          <button class="nav-boton">
+          <button class="nav-boton" title="Ayuda">
             <span class="material-icons">help_outline</span>
           </button>
 
-          <a href="perfil.html" class="nav-boton">
+          <a href="perfil.html" class="nav-boton" title="Perfil">
             <span class="material-icons">account_circle</span>
           </a>
         </div>
@@ -61,17 +60,17 @@
     <main>
       <!-- Barra de navegación "filtro"-->
       <nav id="navegacion-secundaria">
-        <button class="boton-nav">
+        <button class="boton-nav" title="Listas">
+          <span class="material-icons">list_alt</span>
+        </button>
+        <button class="boton-nav" title="Historial">
+          <span class="material-icons">history</span>
+        </button>
+        <button class="boton-nav" title="Graficos">
           <span class="material-icons">bar_chart</span>
         </button>
-        <button class="boton-nav">
-          <span class="material-icons">bar_chart</span>
-        </button>
-        <button class="boton-nav">
-          <span class="material-icons">bar_chart</span>
-        </button>
-        <button class="boton-nav">
-          <span class="material-icons">bar_chart</span>
+        <button class="boton-nav" title="Agregar otra vista">
+          <span class="material-icons">addchart</span>
         </button>
       </nav>
 
@@ -79,10 +78,10 @@
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Salud</h2>
-          <button class="ayuda">
+          <button class="ayuda" title="Ayuda">
             <span class="material-icons">help_outline</span>
           </button>
-          <button class="expandir">
+          <button class="expandir" title="Expandir">
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
@@ -90,23 +89,23 @@
           <table id="tabla-salud">
             <tr class="linea-inferior">
               <th>Tiempo</th>
-              <td><span>14% </span>adelantado</td>
+              <td><span id="">14</span>% adelantado</td>
             </tr>
             <tr class="linea-inferior">
               <th>Tareas</th>
-              <td><span>12 </span>tareas completadas</td>
+              <td><span id="">12</span> tareas completadas</td>
             </tr>
             <tr class="linea-inferior">
               <th>Carga Horaria</th>
-              <td><span>0 </span>tareas vencidas</td>
+              <td><span id="">0</span> tareas vencidas</td>
             </tr>
             <tr class="linea-inferior">
               <th>Progreso</th>
-              <td><span>14% </span>completado</td>
+              <td><span id="">14</span>% completado</td>
             </tr>
             <tr>
               <th>Costo</th>
-              <td><span>42%</span>debajo del presupuesto</td>
+              <td><span id="">42</span>% debajo del presupuesto</td>
             </tr>
           </table>
         </div>
@@ -114,18 +113,18 @@
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Tareas</h2>
-          <button class="ayuda">
-            <span class="material-icons">help_outline</span>
+          <button class="ayuda" title="Ayuda">
+            <span class="material-icons" >help_outline</span>
           </button>
-          <button class="expandir">
+          <button class="expandir" title="Expandir"> 
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
         <div class="detalle">
           <div class="etiquetas-tareas">
-            <div class="tareas-no-empezadas circulo-tareas"></div><p>No empezadas (<span class="tareas-no-empezadas">1</span>)</p>
-            <div class="tareas-en-progreso circulo-tareas"></div><p>En progreso (<span class="tareas-en-progreso">3</span>)</p>
-            <div class="tareas-completadas circulo-tareas"></div><p>Completadas (<span class="tareas-completadas">8</span>)</p>
+            <div class="tareas-no-empezadas circulo-etiqueta"></div><p>No empezadas (<span class="tareas-no-empezadas">1</span>)</p>
+            <div class="tareas-en-progreso circulo-etiqueta"></div><p>En progreso (<span class="tareas-en-progreso">3</span>)</p>
+            <div class="tareas-completadas circulo-etiqueta"></div><p>Completadas (<span class="tareas-completadas">8</span>)</p>
           </div>
 
           <div class="grafico" id="grafico-tareas">
@@ -145,10 +144,10 @@
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Progreso</h2>
-          <button class="ayuda">
+          <button class="ayuda" title="Ayuda">
             <span class="material-icons">help_outline</span>
           </button>
-          <button class="expandir">
+          <button class="expandir" title="Expandir">
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
@@ -205,16 +204,18 @@
       </div>
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
-          <h2 class="titulo-categoria">Cronograma</h2>
-          <button class="ayuda">
+          <h2 class="titulo-categoria">Actividad</h2>
+          <button class="ayuda" title="Ayuda">
             <span class="material-icons">help_outline</span>
           </button>
-          <button class="expandir">
+          <button class="expandir" title="Expandir">
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
         <div class="detalle">
-          <table>
+
+
+          <!-- <table>
             <tr>
               <th>Ventas totales</th>
               <td></td>
@@ -235,32 +236,63 @@
               <th>Tareas</th>
               <td></td>
             </tr>
-          </table>
+          </table> -->
         </div>
-      </div>
+      </div> 
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Gastos</h2>
-          <button class="ayuda">
+          <button class="ayuda" title="Ayuda">
             <span class="material-icons">help_outline</span>
           </button>
-          <button class="expandir">
+          <button class="expandir" title="Expandir">
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
-        <div class="detalle"></div>
+        <div class="detalle-gastos detalle">
+          <div class="etiquetas-tareas">
+            <div class="circulo-etiqueta etiqueta-historico"></div><p>Histórico</p>
+            <div class="circulo-etiqueta etiqueta-planeado"></div><p>Planeado</p>
+            <div class="circulo-etiqueta etiqueta-presupuesto"></div><p>Presupuesto</p>        
+          </div>
+
+          <div class="grafico-gastos"> 
+            <div class="valores">
+              <span class="valor-grafico-gastos">6K </span>
+              <!-- <hr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -->
+              <span class="valor-grafico-gastos">6K </span>
+              <!-- <hr> -->
+              <span class="valor-grafico-gastos">6K </span>
+              <!-- <hr> -->
+              <span class="valor-grafico-gastos">6K </span>
+              <!-- <hr> -->
+              <span class="valor-grafico-gastos">6K </span>
+              <!-- <hr> -->
+            </div>
+            
+            <div class="columna-grafico-barras columna-historico"></div>
+            <div class="columna-grafico-barras columna-planeado"></div>
+            <div class="columna-grafico-barras columna-presupuesto"></div>
+          </div>
+        </div>
       </div>
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Trabajo</h2>
-          <button class="ayuda">
+          <button class="ayuda" title="Ayuda">
             <span class="material-icons">help_outline</span>
           </button>
-          <button class="expandir">
+          <button class="expandir" title="Expandir">
             <span class="material-icons">settings_overscan</span>
           </button>
         </div>
-        <div class="detalle"></div>
+        <div class="detalle">
+          <div class="etiquetas-tareas">
+            <div class="circulo-etiqueta etiqueta-completado"></div><p>Completado</p>
+            <div class="circulo-etiqueta etiqueta-restante"></div><p>Restante</p>
+            <div class="circulo-etiqueta etiqueta-atrasado"></div><p>Atrasado</p>        
+          </div>
+        </div>
       </div>
 
 

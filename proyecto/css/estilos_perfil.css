@@ -1,0 +1,151 @@
+/* ESTILOS GENERALES */
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    padding-left: 25px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.9em;
+    color:hsl(204, 15%, 60%);
+}
+
+/* HEADER Y BARRA DE NAVEGACION PRINCIPAL */
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50px;
+    width: 55px;
+    padding-top: 10px;
+
+    /* ESTILOS */
+    color: hsl(204, 22%, 95%);
+    background-color:hsl(0, 0%, 0%);
+
+    /* PARA PROBAR */
+
+}
+
+#menu {
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50px;
+    left: 0px;
+
+    /* ESTILOS */
+    background-color:hsl(0, 0%, 0%);
+
+}
+
+#logo>img {
+    width: 45px;
+    margin: 5px;
+}
+
+.nav-boton {
+    background-color: transparent;
+    border: none;
+
+    color: hsl(204, 22%, 95%);
+}
+
+.nav-boton:hover {
+    background-color: hsl(215, 20%, 16%);
+    border-radius: 10%;
+}
+
+.nav-hr {
+    min-width: 30px;
+    border: 1px solid hsl(204, 22%, 95%);
+}
+
+.opciones-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    justify-content: end;
+    flex-grow: 1;
+
+    padding-bottom: 20px;
+    
+}
+
+.nav-boton > .material-icons {
+    font-size: 2.2em;
+}
+
+/* PANEL DE AJUSTES */
+
+.titulo-categoria {
+    font-size: 1.8em;
+    font-weight: 300;
+}
+.categoria-seleccionado {
+    font-weight: 600;
+}
+
+/* MENU SUPERIOR */
+
+.menu-superior {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.boton-normal {
+    display: flex;
+    align-items: center;
+    margin: auto 15px auto 15px;
+    padding: 5px 10px 5px 10px;
+
+}
+
+.boton-presionado {
+    display: flex;
+    align-items: center;
+    margin: auto 15px auto 15px;
+    padding: 5px 15px 5px 10px;
+    border-radius: 25px;
+    background-color: hsl(303, 13%, 14%);
+}
+
+.boton-normal:hover {
+    display: flex;
+    align-items: center;
+    margin: auto 15px auto 15px;
+    color: white;
+
+}
+
+/* PANEL DETALLES DE PERFIL */
+.perfil-detalles {
+    border-radius: 8px;
+    background-color: hsl(247, 28%, 52%);
+    color: hsl(204, 35%, 87%);
+    padding: 5px 15px 5px 15px;
+    margin: 15px auto 15px auto;
+    box-shadow: 0 2px 10px 2px hsl(247, 28%, 15%); 
+}
+
+.titulo-perfil-detalles {
+    font-size: 1.3em;
+}
+
+.parte-superior-perfil-detalles {
+    display: flex;
+}
+
+.icono-usuario-generico {
+    border-radius: 25px;
+    background-color: hsl(247, 28%, 4%);
+    
+}
+#usuario {
+    font-size: 3em;
+}

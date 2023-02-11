@@ -28,9 +28,12 @@ header {
     display: flex;
     flex-direction: column;
     flex: 0 0 50px;
+    width: 55px;
+    padding-top: 10px;
 
     /* ESTILOS */
     color: hsl(204, 22%, 95%);
+    background-color:hsl(0, 0%, 0%);
 
     /* PARA PROBAR */
 
@@ -42,11 +45,17 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 50px;
+    max-width: 50px;
+    left: 0px;
 
     /* ESTILOS */
     background-color:hsl(0, 0%, 0%);
 
+}
+
+#logo>img {
+    width: 45px;
+    margin: 5px;
 }
 
 .nav-boton {
@@ -56,7 +65,7 @@ header {
     color: hsl(204, 22%, 95%);
 }
 
-.nav-boton > button:hover {
+.nav-boton:hover {
     background-color: hsl(215, 20%, 16%);
     border-radius: 10%;
 }
@@ -69,11 +78,13 @@ header {
 .opciones-perfil {
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
-    
+    align-items: center;
     gap: 8px;
     justify-content: end;
     flex-grow: 1;
+
+    padding-bottom: 20px;
+    
 }
 
 .nav-boton > .material-icons {
@@ -88,6 +99,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
     padding: 2px;
     width: 100%;
@@ -193,10 +205,17 @@ footer>p {
 /* SALUD */
 #tabla-salud {
     width: 100%;
+    text-align: left;
 }
 
 #tabla-salud td, th{
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+    line-height: 25px;
+}
+
+#tabla-salud th {
+    color: hsl(0, 0%, 100%);
+    font-weight: 300;
 }
 
 
@@ -204,20 +223,24 @@ footer>p {
 .etiquetas-tareas {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
 
     font-size: 0.9em;
 }
 
-div.circulo-tareas {
-    position: relative;
-    top: 14px;
-    left: 9px;
+.etiquetas-tareas > p {
+    margin-right: auto;
+}
+
+div.circulo-etiqueta {
     height: 12px;
     width: 12px;
     border-radius: 12rem;
 
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 div.tareas-no-empezadas {
@@ -339,6 +362,75 @@ div.tareas-completadas{
     rotate: 0deg;
 }
 
+/* ACTIVIDAD*/
+
+/*GASTOS*/
+
+div.etiqueta-historico {
+    background-color: hsl(119, 52%, 60%);
+}
+
+div.etiqueta-planeado {
+    background-color: hsl(176, 55%, 55%);
+}
+
+div.etiqueta-presupuesto {
+    background-color: hsl(207, 82%, 56%);
+}
+
+.grafico-gastos {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.valores {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    line-height: 35px;
+    width: 100%;
+}
+
+.valor-grafico-gastos {
+    display: block;
+}
+
+/* .valores > hr {
+    width: 80%;
+    position: relative;
+    bottom: 20px;
+} */
+
+
+.columna-grafico-barras { 
+    width: 50px;
+    height: 100%;
+
+    /* PARA PROBAR */
+    min-height: 15px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.columna-historico {
+
+}
+
+.columna-planeado {
+
+}
+
+.columna-presupuesto {
+
+}
+
+
+
+
+
 
 /* PROGRESO */
 .detalle_progreso{
@@ -351,10 +443,6 @@ div.tareas-completadas{
     width: 40%;
 }
 
-/* 
-progress {
-    opacity: 0;
-} */
 
 .barra-progreso {
     border: none;
@@ -375,4 +463,21 @@ progress {
 
 #adquisiciones{
     background-color: hsl(329, 69%, 62%);
+}
+
+/*TRABAJO*/
+
+div.etiqueta-completado {
+
+    background-color: hsl(119, 52%, 60%);
+}
+
+div.etiqueta-restante {
+
+    background-color: hsl(176, 55%, 55%);
+}
+
+div.etiqueta-atrasado {
+
+    background-color: hsl(4, 65%, 56%);
 }
