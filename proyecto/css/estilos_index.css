@@ -132,7 +132,6 @@ header {
     flex: 1;
 
     /* Estilos */
-    font-family: 'Archivo', sans-serif;
     font-size: 0.9em;
     color:hsl(204, 15%, 60%);
     border: solid hsl(233, 21%, 16%) 1px;
@@ -173,6 +172,8 @@ header {
 
 .detalle {
     padding: 0px 10px 10px;
+    font-family:'Quicksand', sans-serif;
+    font-size: 0.9em;
 }
 
 
@@ -221,14 +222,15 @@ footer>p {
 
 /* TAREAS */
 .etiquetas-tareas {
+    position: relative;
+    bottom: 15px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 5px;
     padding: 5px;
-
-    font-size: 0.9em;
 }
 
 .etiquetas-tareas > p {
@@ -274,28 +276,27 @@ div.tareas-completadas{
 
 .grafico > span:nth-child(1) {
     position: absolute;
-    top: 143px;
-    left: 236px;
+    top: 95%;
+    left: 65%;
 
     color: hsl(213, 10%, 64%);
 }
 
 .grafico > span:nth-child(2) {
     position: absolute;
-    top: 5px;
-    left: 251px;
+    top: 3%;
+    left: 70%;
 
     color: hsl(176, 55%, 55%);
 }
 
 .grafico > span:nth-child(3) {
     position: absolute;
-    top: 60px;
-    left: 98px;
+    top: 20%;
+    left: 23%;
 
     color: hsl(119, 52%, 60%);
 }
-
 
 .circulo-exterior {
     display: flex;
@@ -362,7 +363,192 @@ div.tareas-completadas{
     rotate: 0deg;
 }
 
-/* ACTIVIDAD*/
+
+/* PROGRESO */
+.detalle_progreso{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    color: hsl(0, 0%, 100%);
+}
+
+.label_progreso{
+    width: 40%;
+}
+
+.barra-progreso {
+    display: flex;
+    gap: 8px;
+    
+    background-color: hsl(233, 33%, 10%);
+    width: 60%;
+    height: 15%;
+}
+
+.barra-progreso > span {
+    color: hsl(213, 10%, 64%);
+    width: 45px;
+    text-align: end;
+}
+
+.progresos-contratos{
+    height: 75%;
+    flex: 1;
+}
+
+.progresos-contratos>div{
+    width:  100%;
+    height: 100%;
+    background-color: hsl(119, 52%, 60%);
+}
+
+#progreso-contratos { 
+    color: hsl(119, 52%, 60%);
+}
+
+.progresos-diseño{
+    flex: 1;
+    height: 75%;
+}
+
+.progresos-diseño>div{
+    width:  80%;
+    height: 100%;
+    background-color: hsl(119, 52%, 60%);
+}
+
+#progreso-diseño {
+    color: hsl(119, 52%, 60%);
+}
+
+.progresos-adquisiciones{
+    flex: 1;
+    height: 75%;
+}
+
+.progresos-adquisiciones>div{
+    width:  19%;
+    height: 100%;
+    background-color: hsl(329, 69%, 62%);
+}
+
+#progreso-adquisiciones {
+    color: hsl(329, 69%, 62%);
+}
+
+.progresos-construccion{
+    flex: 1;
+    height: 75%;
+}
+
+.progresos-construccion > div{
+    width:  0.1%;
+    height: 100%;
+    background-color: hsl(0, 0%, 61%);
+}
+
+.progresos-post-construccion{
+    flex: 1;
+    height: 75%;
+}
+
+.progresos-post-construccion > div{
+    width:  0.1%;
+    height: 100%;
+    background-color: hsl(0, 0%, 61%);
+}
+
+.progresos-fin-proyecto{
+    flex: 1;
+    height: 75%;
+}
+
+.progresos-fin-proyecto>div{
+    width:  0.1%;
+    height: 75%;
+    background-color: hsl(0, 0%, 61%);
+}
+
+
+    
+
+
+
+
+/*ACTIVIDAD*/
+div.etiqueta-adelantado {
+
+    background-color: hsl(207, 82%, 56%);
+}
+
+div.etiqueta-atrasado {
+
+    background-color: hsl(34, 74%, 57%);
+}
+
+div.etiqueta-al-dia {
+
+    background-color: hsl(119, 52%, 60%);
+}
+
+.contenedor-grafico{
+    display: flex;
+    height: 200px;
+    width: 100%;
+}
+
+.label-actividad {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    
+}
+
+.grafico-actividad{
+    width: 70%;
+
+}
+
+.lineas-actividad{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    
+
+}
+
+.lineas-actividad>div{
+    width: 20%;
+    border: 3px;
+    border-color: white;
+    
+}
+
+.valores-actividad
+
+.valores-actividad>span{
+    width: 100%;
+
+
+}
+
+/* .lineas-actividad {
+
+    position: relative;    
+    display: flex;
+    flex-direction: row;
+    width: 50px;
+    height: 200px;
+    align-items: flex-end;
+
+} */
+
+
+/**//**//**//**/
+
+
+
 
 /*GASTOS*/
 
@@ -383,48 +569,69 @@ div.etiqueta-presupuesto {
 
     display: flex;
     flex-direction: row;
+
+    padding: 0px 0px 0px 10px;
 }
 
 
-.valores {
+.valores-gastos {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    line-height: 35px;
+    line-height: 20px;
     width: 100%;
+    font-weight: 800;
 }
 
 .valor-grafico-gastos {
     display: block;
 }
 
-/* .valores > hr {
+.valores-gastos > hr {
     width: 80%;
     position: relative;
-    bottom: 20px;
-} */
+    bottom: 17px;
+}
 
 
 .columna-grafico-barras { 
-    width: 50px;
-    height: 100%;
-
-    /* PARA PROBAR */
-    min-height: 15px;
-    background-color: yellow;
-    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end;
+    width: 15%;
+    height: 86%;
+    position: absolute;
 }
 
 .columna-historico {
+    left: 22%;
+}
 
+.columna-historico > div {
+    background-color: hsl(119, 52%, 60%);
+    height: 55%;
+    width: 100%;
 }
 
 .columna-planeado {
-
+    left: 44%;
 }
+
+.columna-planeado > div {
+    background-color: hsl(176, 55%, 55%);
+    height: 70%;
+    width: 100%;
+}
+
 
 .columna-presupuesto {
+    left: 66%;
+}
 
+.columna-presupuesto>div {
+    background-color: hsl(207, 82%, 56%);
+    height: 75%;
+    width: 100%;
 }
 
 
@@ -432,38 +639,6 @@ div.etiqueta-presupuesto {
 
 
 
-/* PROGRESO */
-.detalle_progreso{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.label_progreso{
-    width: 40%;
-}
-
-
-.barra-progreso {
-    border: none;
-    width: 60%;
-
-    accent-color: coral;
-    background-color: hsl(119, 51%, 60%);
-}
-
-#contratos{
-    background-color: hsl(119, 51%, 60%);
-    accent-color: coral;
-}
-
-#diseño{
-    background-color: hsl(119, 51%, 60%);
-}
-
-#adquisiciones{
-    background-color: hsl(329, 69%, 62%);
-}
 
 /*TRABAJO*/
 
@@ -477,7 +652,87 @@ div.etiqueta-restante {
     background-color: hsl(176, 55%, 55%);
 }
 
-div.etiqueta-atrasado {
+div.etiqueta-acumulado {
 
+    background-color: hsl(4, 65%, 56%);
+}
+
+.grafico-trabajo {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 10px;
+
+}
+.usuarios {
+    display: flex;
+    flex-direction: column;
+
+    width: 20%;
+    gap: 18px;
+}
+
+
+.valores-trabajo {
+    display: flex;
+
+    width: 80%;
+}
+
+.barras-verticales {
+    display: flex;
+    gap: 20%;
+    
+    flex-grow: 1;
+}
+
+.barras-verticales > div {
+    position: relative;
+
+    border-right: 1px white solid;
+    border-left: 1px white solid;
+    height: 100%;
+}
+
+.valores-trabajo > span {
+    width: 100%;
+}
+
+.barras-grafico-trabajo {
+    position: absolute;
+    display: flex;
+    width: 65.5%;
+    left: 20%;
+    height: 86%;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.barra-progreso-trabajo {
+    position: absolute;
+    
+    width: 100%;
+    height: 10%;
+
+    background-color: yellow;
+} 
+
+.trabajo-completado {
+    height: 100%;
+    
+    background-color: hsl(119, 52%, 60%);
+}
+
+.trabajo-restante {
+    height: 100%;
+    
+    background-color: hsl(176, 55%, 55%);
+}
+
+.trabajo-atrasado {
+    height: 100%;
+    
     background-color: hsl(4, 65%, 56%);
 }

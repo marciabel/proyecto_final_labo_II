@@ -4,18 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600&display=swap"
       rel="stylesheet"
-    />
+      />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/estilos_generales.css" />
     <link rel="stylesheet" href="css/estilos_index.css" />
+    
     <title>Lorem</title>
   </head>
   <body>
@@ -110,6 +115,8 @@
           </table>
         </div>
       </div>
+
+
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Tareas</h2>
@@ -141,6 +148,8 @@
           </div>
         </div>
       </div>
+
+
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Progreso</h2>
@@ -152,56 +161,42 @@
           </button>
         </div>
         <div class="detalle detalle_progreso">
+
           <div class="label_progreso">Contratos</div>
-          <progress
-            class="barra-progreso"
-            id="contratos"
-            max="100"
-            value="100"
-          ></progress>
+          <div class="barra-progreso">
+            <span id="progreso-contratos">100%</span><div class="progresos-contratos"> <div></div> </div>
+          </div>
+
           <label class="label_progreso" for="diseño">Diseño</label>
-          <progress
-            class="barra-progreso"
-            id="diseño"
-            max="100"
-            value="80"
-          ></progress>
+          <div class="barra-progreso">
+            <span id="progreso-diseño">80%</span><div class="progresos-diseño"> <div></div> </div>            
+          </div>
+
           <label class="label_progreso" for="adquisiciones"
-            >Adquisiciones</label
-          >
-          <progress
-            class="barra-progreso"
-            id="adquisiciones"
-            max="100"
-            value="19"
-          ></progress>
+            >Adquisiciones</label>
+          <div class="barra-progreso">
+            <span id="progreso-adquisiciones">19%</span><div class="progresos-adquisiciones"> <div></div> </div>
+          </div>
+
           <label class="label_progreso" for="construccion">Construcción</label>
-          <progress
-            class="barra-progreso"
-            id="construccion"
-            max="100"
-            value="0"
-          ></progress>
+          <div class="barra-progreso">
+            <span id="progreso-construccion">0%</span><div class="progresos-construccion"> <div></div> </div>
+          </div>
+
           <label class="label_progreso" for="post_contruccion"
-            >Post Construcción</label
-          >
-          <progress
-            class="barra-progreso"
-            id="post_contruccion"
-            max="100"
-            value="0"
-          ></progress>
+            >Post Construcción</label>
+          <div class="barra-progreso">
+            <span id="progreso-post-construccion">0%</span><div class="progresos-post-construccion"> <div></div> </div>
+          </div>
           <label class="label_progreso" for="fin_proyecto"
-            >Finalizacion de Proyecto</label
-          >
-          <progress
-            class="barra-progreso"
-            id="fin_proyecto"
-            max="100"
-            value="0"
-          ></progress>
+            >Finalizacion de Proyecto</label>
+          <div class="barra-progreso">
+            <span id="progreso-finalizacion-proyecto">0%</span><div class="progresos-fin-proyecto"> <div></div> </div>
+          </div>
         </div>
-      </div>
+      </div> 
+
+
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Actividad</h2>
@@ -213,32 +208,53 @@
           </button>
         </div>
         <div class="detalle">
+          <div class="etiquetas-tareas">
+            <div class="circulo-etiqueta etiqueta-adelantado"></div><p>Adelantado</p>
+            <div class="circulo-etiqueta etiqueta-atrasado"></div><p>Atrasado</p>
+            <div class="circulo-etiqueta etiqueta-al-dia"></div><p>Al dia</p>        
+          </div>
+          <div class="contenedor-grafico">
+            <div class="label-actividad">
+              <span>Planned Completion</span>
+              <span>Actual Completion</span>
+              <span>Ahead</span>
+            </div>
 
+            <div class="grafico-actividad">
+              <div class="lineas-actividad">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
 
-          <!-- <table>
-            <tr>
-              <th>Ventas totales</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Ingreso</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Presupuesto</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Progreso</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Tareas</th>
-              <td></td>
-            </tr>
-          </table> -->
+              <div class="valores-actividad">
+                <span>100</span>
+                <span>75</span>
+                <span>50</span>
+                <span>25</span>
+                <span>0</span>
+                <span>25</span>
+                <span>50</span>
+                <span>75</span>            
+                <span>100</span>
+              </div>
+            </div>
+
+          </div>
+          
+          
+           
+
         </div>
-      </div> 
+      </div>
+
+
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Gastos</h2>
@@ -257,25 +273,33 @@
           </div>
 
           <div class="grafico-gastos"> 
-            <div class="valores">
-              <span class="valor-grafico-gastos">6K </span>
-              <!-- <hr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -->
-              <span class="valor-grafico-gastos">6K </span>
-              <!-- <hr> -->
-              <span class="valor-grafico-gastos">6K </span>
-              <!-- <hr> -->
-              <span class="valor-grafico-gastos">6K </span>
-              <!-- <hr> -->
-              <span class="valor-grafico-gastos">6K </span>
-              <!-- <hr> -->
+            <div class="valores-gastos">
+              <span class="valor-grafico-gastos">5K </span>
+              <hr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+              <span class="valor-grafico-gastos">4K </span>
+              <hr>
+              <span class="valor-grafico-gastos">3K </span>
+              <hr>
+              <span class="valor-grafico-gastos">2K </span>
+              <hr>
+              <span class="valor-grafico-gastos">1K </span>
+              <hr>
             </div>
             
-            <div class="columna-grafico-barras columna-historico"></div>
-            <div class="columna-grafico-barras columna-planeado"></div>
-            <div class="columna-grafico-barras columna-presupuesto"></div>
+            <div class="columna-grafico-barras columna-historico">
+              <div></div>
+            </div>
+            <div class="columna-grafico-barras columna-planeado">
+              <div></div>
+            </div>
+            <div class="columna-grafico-barras columna-presupuesto">
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
+
+
       <div class="contenedor-individual">
         <div class="encabezado-contenedor-individual">
           <h2 class="titulo-categoria">Trabajo</h2>
@@ -290,8 +314,67 @@
           <div class="etiquetas-tareas">
             <div class="circulo-etiqueta etiqueta-completado"></div><p>Completado</p>
             <div class="circulo-etiqueta etiqueta-restante"></div><p>Restante</p>
-            <div class="circulo-etiqueta etiqueta-atrasado"></div><p>Atrasado</p>        
+            <div class="circulo-etiqueta etiqueta-acumulado"></div><p>Acumulado</p>        
           </div>
+
+          <div class="grafico-trabajo">
+            <div class="usuarios">
+              <span>Mike</span>
+              <span>Mike</span>
+              <span>Mike</span>
+              <span>Mike</span>
+              <span>Mike</span>
+            </div>
+
+            <div class="barras-verticales">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              
+            </div>
+            
+            <div class="valores-trabajo">
+              <span>0</span>
+              <span>2</span>
+              <span>4</span>
+              <span>6</span>
+              <span>8</span>
+            </div>
+            <div class="barras-grafico-trabajo">
+              <div class="barra-progreso-trabajo">
+                <div class="trabajo-completado"></div>
+                <div class="trabajo-restante"></div>
+                <div class="trabajo-atrasado"></div>
+              </div>
+              <div class="barra-progreso-trabajo">
+                <div class="trabajo-completado"></div>
+                <div class="trabajo-restante"></div>
+                <div class="trabajo-atrasado"></div>
+              </div>
+              <div class="barra-progreso-trabajo">
+                <div class="trabajo-completado"></div>
+                <div class="trabajo-restante"></div>
+                <div class="trabajo-atrasado"></div>
+              </div>
+              <div class="barra-progreso-trabajo">
+                <div class="trabajo-completado"></div>
+                <div class="trabajo-restante"></div>
+                <div class="trabajo-atrasado"></div>
+              </div>
+              <div class="barra-progreso-trabajo">
+                <div class="trabajo-completado"></div>
+                <div class="trabajo-restante"></div>
+                <div class="trabajo-atrasado"></div>
+              </div>
+            </div>
+            
+          </div>
+
+          
+          
+          
         </div>
       </div>
 

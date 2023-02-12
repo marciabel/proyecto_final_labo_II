@@ -107,7 +107,7 @@ header {
 
 }
 
-.boton-presionado {
+.boton-seleccionado {
     display: flex;
     align-items: center;
     margin: auto 15px auto 15px;
@@ -115,6 +115,7 @@ header {
     border-radius: 25px;
     background-color: hsl(303, 13%, 14%);
 }
+
 
 .boton-normal:hover {
     display: flex;
@@ -169,6 +170,15 @@ header {
     padding: 15px;
     border-radius: 25px;
     background-color: hsl(303, 13%, 14%);
+}
+
+.boton-destacado:hover {
+    display: flex;
+    align-items: center;
+    margin: auto 15px auto 15px;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: hsl(303, 13%, 9%);
 }
 
 .boton-bordeado {
