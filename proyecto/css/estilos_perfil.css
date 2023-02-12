@@ -104,6 +104,11 @@ header {
     align-items: center;
     margin: auto 15px auto 15px;
     padding: 5px 10px 5px 10px;
+    background-color: transparent;
+    color:hsl(204, 15%, 60%);
+    font-family: 'Archivo', sans-serif;
+    font-size: 1em;
+    border: 0;
 
 }
 
@@ -114,22 +119,23 @@ header {
     padding: 5px 15px 5px 10px;
     border-radius: 25px;
     background-color: hsl(303, 13%, 14%);
+    color:hsl(204, 15%, 60%);
+    font-family: 'Archivo', sans-serif;
+    font-size: 1em;
+    border: 0;
 }
 
 
 .boton-normal:hover {
-    display: flex;
-    align-items: center;
-    margin: auto 15px auto 15px;
     color: white;
 
 }
 
-/* PANEL DETALLES DE PERFIL */
-.perfil-detalles {
+/* MODELO DE CADA PANEL */
+.contenedor-panel {
     width: 100%;
     border-radius: 8px;
-    background-color: hsl(247, 28%, 52%);
+    background-color: hsl(296, 23%, 30%);
     color: hsl(204, 35%, 87%);
     padding: 5px 15px 5px 15px;
     margin: 15px auto 15px auto;
@@ -160,7 +166,7 @@ header {
 }
 
 /* CONTENEDOR DE BOTONES PARA CAMBIAR FOTO */
-.contenedor-botones-fotos {
+.contenedor-botones {
     display: flex;
     flex-flow: row nowrap;
     
@@ -175,14 +181,13 @@ header {
     padding: 15px;
     border-radius: 25px;
     background-color: hsl(303, 13%, 14%);
+    color:hsl(204, 15%, 60%);
+    font-family: 'Archivo', sans-serif;
+    font-size: 1em;
+    border: 0;
 }
 
 .boton-destacado:hover {
-    display: flex;
-    align-items: center;
-    margin: auto 15px auto 15px;
-    padding: 15px;
-    border-radius: 25px;
     background-color: hsl(303, 13%, 9%);
 }
 
@@ -192,24 +197,87 @@ header {
     margin: auto 15px auto 15px;
     padding: 15px;
     border: 2px solid;
-    border-color: hsl(303, 13%, 14%);
+    border-color: hsl(303, 13%, 9%);
     border-radius: 25px;
-    background-color: hsl(247, 28%, 52%);
-    color: hsl(303, 13%, 14%);
+    background-color: hsl(296, 23%, 30%);
+    color: hsl(303, 13%, 9%);
+    font-family: 'Archivo', sans-serif;
+    font-size: 1em;
 }
 
 .boton-bordeado:hover {
-    display: flex;
-    align-items: center;
-    margin: auto 15px auto 15px;
-    padding: 15px;
-    border-radius: 25px;
     background-color: hsl(303, 13%, 14%);
-    color: hsl(204, 35%, 87%);;
+    color: hsl(204, 15%, 60%);
 }
 
 /* LINEA SEPARADORA DEL PANEL PRINCIPAL */
 
 .separador {
     margin: 20px -15px 0 -15px;
+    background-color: hsl(0, 0%, 87%);
+    border-color: hsl(0, 0%, 87%);
+}
+
+/* DISEÑO DE FORMULARIO */
+
+#tabla {
+    display: flex;
+    flex-flow: row wrap;
+}
+.item-tabla {
+    width: 43%;
+    padding: 20px 30px 20px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.etiqueta-formulario {
+    padding-bottom: 10px;
+}
+
+.entrada-formulario {
+    width: 100%;
+    height: 40px;
+    border: 2px solid hsl(0, 0%, 87%);
+    border-radius: 10px;
+    padding-left: 0.6rem;
+}
+
+#guardar-cancelar {
+    padding-bottom: 1rem;
+
+}
+
+.cuadro-advertencia {
+    background-color: hsl(296, 21%, 14%);
+    padding-left: 1.2em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    border-radius: 4px;
+}
+
+#desactivarCuenta > * {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#botonDesactivar {
+    background-color: hsl(338, 85%, 29%);
+    margin-left: 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    line-height: 0.2em;
+    width: 100%;
+    padding: 3px 1px 1px;
+    max-height: fit-content;
+    border: solid hsl(233, 21%, 16%) 1px;
+    background-color: hsl(233, 33%, 10%);
+
+    color: hsl(204, 15%, 50%);
+    font-size: 0.8em;
+    
+ 
 }

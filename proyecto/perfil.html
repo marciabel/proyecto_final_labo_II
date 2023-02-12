@@ -55,46 +55,99 @@
     <main>
         <h4 class="titulo-categoria">Ajustes de Cuenta / <span class="categoria-seleccionado">Cuenta</span></h4>
         <div class="menu-superior">
-            <div class="boton-seleccionado" title="Cuenta"><span class="material-symbols-outlined">
+            <button class="boton-seleccionado" title="Cuenta"><span class="material-symbols-outlined">
                 person
-                </span>Cuenta</div>
-            <div class="boton-normal" title="Notificaciones"><span class="material-symbols-outlined">
+                </span>Cuenta</button>
+            <button class="boton-normal" title="Notificaciones"><span class="material-symbols-outlined">
                 notifications
-                </span>Notificaciones</div>
-            <div class="boton-normal" title="Conexiones"><span class="material-symbols-outlined">
+                </span>Notificaciones</button>
+            <button class="boton-normal" title="Conexiones"><span class="material-symbols-outlined">
                 link
-                </span>Conexiones</div>
+                </span>Conexiones</button>
         </div>
-        <div class="perfil-detalles">
+        <div class="contenedor-panel" id="perfil-detalles">
             <p class="titulo-perfil-detalles">Detalles de perfil</p>
             <div class="contenedor-superior-fotos">
                 <img id="foto-usuario" title="Foto Usuario" src="img/userprofile.png" alt="userimage">
                 <div class="wrapper-botones-y-etiqueta">
-                    <div class="contenedor-botones-fotos">
-                        <div class="boton-destacado">Subir nueva foto</div>
-                        <div class="boton-bordeado">Resetear foto</div>
+                    <div class="contenedor-botones">
+                        <button class="boton-destacado">Subir nueva foto</button>
+                        <button class="boton-bordeado">Resetear foto</button>
                     </div>
                     <p>Se permite JPG, GIF o PNG. Tamaño máximo de 800K</p>
                 </div>
             </div>
             <hr class="separador">
-            <div class="panel-formularios">
-                <h1>DETALLES</h1>
-                <h1>DETALLES</h1>
-                <h1>DETALLES</h1>
-                <h1>DETALLES</h1>
-                <h1>DETALLES</h1>
-            </div>
+            <form id="tabla">                
+                <div class="item-tabla">
+                    <label for="nombre" class="etiqueta-formulario">NOMBRE</label>
+                    <br>
+                    <input type="text" placeholder="John" class="entrada-formulario">
+                </div>
+                <div class="item-tabla">
+                    <label for="apellido" class="etiqueta-formulario">APELLIDO</label>
+                    <br>
+                    <input type="text" placeholder="Doe" class="entrada-formulario">
+                </div>
+                <div class="item-tabla">
+                    <label for="email" class="etiqueta-formulario">E-MAIL</label>
+                    <br>
+                    <input type="text" placeholder="nombre@apellido.com" class="entrada-formulario">
+                </div>
+                <div class="item-tabla">
+                    <label for="organizacion" class="etiqueta-formulario">ORGANIZACIÓN</label>
+                    <br>
+                    <input type="text" placeholder="John Doe's Company" class="entrada-formulario">
+                </div>
+                <div class="item-tabla">
+                    <label for="telefono" class="etiqueta-formulario">TELÉFONO</label>
+                    <br>
+                    <input type="text" placeholder="+54 9 0123456789" class="entrada-formulario">
+                </div>
+                <div class="item-tabla">
+                    <label for="direccion" class="etiqueta-formulario">DIRECCIÓN</label>
+                    <br>
+                    <input type="text" placeholder="2023 Doe St." class="entrada-formulario">
+                </div>
+                <div class="item-tabla">
+                    <label for="provincia" class="etiqueta-formulario">PROVINCIA</label>
+                    <br>
+                    <input type="text" placeholder="Provincia" class="entrada-formulario">
+                </div>
+                <div class="item-tabla">
+                    <label for="codigopostal" class="etiqueta-formulario">CÓDIGO POSTAL</label>
+                    <br>
+                    <input type="text" placeholder="XXXXXXXX" class="entrada-formulario">
+                </div>
+                <div class="contenedor-botones" id="guardar-cancelar">
+                    <button class="boton-destacado">Guardar cambios</button>
+                    <button class="boton-bordeado">Cancelar</button>
+                </div>
+                    
+            </form>
         </div>
+        
+        
+        <div class="contenedor-panel">
+            <p class="titulo-perfil-detalles">Eliminar cuenta</p>
+            <div class="cuadro-advertencia">
+                <h4>Estas seguro/a de eliminar tu cuenta?</h4>
+                <p>Una vez la elimines, no hay vuelta atras. Elige con cuidado.</p>
+            </div>
+            <form id="desactivarCuenta">
+                <div>
+                    <input type="checkbox" id="desactivar" name="desactivar" value="Cuenta">
+                    <label for="desactivar"> Confirmo la desactivación de mi cuenta</label>
+                </div>          
+                <button class="boton-destacado" id="botonDesactivar">Desactivar cuenta</button>
+            </form>
 
-
-
-
-
+        </div>
 
     </main>
     <footer>
-        
+        <p>&copy; Alvarez Marcia Belen - D'Annunzio Stefano - Dominguez Pamela</p>
+        <p>Laboratorio de Computación II (TUP) - 2023</p>    
     </footer>
 </body>
 </html>
