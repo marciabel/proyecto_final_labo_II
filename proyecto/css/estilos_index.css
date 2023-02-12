@@ -711,28 +711,48 @@ div.etiqueta-acumulado {
 }
 
 .barra-progreso-trabajo {
-    position: absolute;
-    
+    display: flex;
+
     width: 100%;
     height: 10%;
-
-    background-color: yellow;
 } 
 
-.trabajo-completado {
+.barra-progreso-trabajo > div {
     height: 100%;
-    
+}
+
+.trabajo-completado {
     background-color: hsl(119, 52%, 60%);
 }
 
 .trabajo-restante {
-    height: 100%;
-    
     background-color: hsl(176, 55%, 55%);
 }
 
 .trabajo-atrasado {
-    height: 100%;
-    
     background-color: hsl(4, 65%, 56%);
+}
+
+.progreso-mike > div.trabajo-completado {
+    width: 50%;
+}
+
+.progreso-jennifer > div.trabajo-completado {
+    width: 25%;
+}
+
+.progreso-jennifer > div.trabajo-restante {
+    width: 25%;
+}
+
+.progreso-brandon > div.trabajo-restante {
+    width: 12.5%;
+}
+
+.progreso-sam > div.trabajo-restante {
+    width: 27.5%;
+}
+
+.progreso-george > div.trabajo-restante {
+    width: 12.5%;
 }
