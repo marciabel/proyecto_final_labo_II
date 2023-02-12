@@ -142,6 +142,8 @@ header {
     box-shadow: 0 2px 10px 2px hsl(247, 28%, 15%); 
 }
 
+/* ------ PANEL PRINCIPAL DE DETALLES DE PERFIL */
+
 .titulo-perfil-detalles {
     font-size: 1.3em;
 }
@@ -218,12 +220,15 @@ header {
     border-color: hsl(0, 0%, 87%);
 }
 
-/* DISEÑO DE FORMULARIO */
+/* ------ FORMULARIO */
 
 #tabla {
     display: flex;
     flex-flow: row wrap;
 }
+
+/* ITEMS DE LA TABLA */
+
 .item-tabla {
     width: 43%;
     padding: 20px 30px 20px 10px;
@@ -243,11 +248,15 @@ header {
     padding-left: 0.6rem;
 }
 
+/* BOTONES DE GUARDAR Y CANCELAR */
+
 #guardar-cancelar {
     padding-bottom: 1rem;
 
 }
+/* ------ PANEL DE DESACTIVACIÓN */
 
+/* CUADRO DE ADVERTENCIA */
 .cuadro-advertencia {
     background-color: hsl(296, 21%, 14%);
     padding-left: 1.2em;
@@ -264,6 +273,10 @@ header {
 #botonDesactivar {
     background-color: hsl(338, 85%, 29%);
     margin-left: 0;
+}
+
+#botonDesactivar:hover {
+    background-color: hsl(338, 85%, 46%);
 }
 
 /* FOOTER */
