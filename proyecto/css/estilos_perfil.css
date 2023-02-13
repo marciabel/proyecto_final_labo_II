@@ -6,8 +6,9 @@ body {
 }
 
 main {
-    width: 70%;
-    padding-left: 25px;
+    flex: 1 1 70%;
+
+    padding: 0% 3%;
     font-family: 'Archivo', sans-serif;
     font-size: 0.9em;
     color:hsl(204, 15%, 60%);
@@ -18,8 +19,7 @@ main {
 header {
     display: flex;
     flex-direction: column;
-    flex: 0 0 50px;
-    width: 55px;
+    flex: 0 0 55px;
     padding-top: 10px;
 
     /* ESTILOS */
@@ -35,7 +35,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 50px;
+    max-width: 55px;
     left: 0px;
 
     /* ESTILOS */
@@ -132,13 +132,13 @@ header {
 
 /* MODELO DE CADA PANEL */
 .contenedor-panel {
-    width: 100%;
     border-radius: 8px;
     background-color: hsl(296, 23%, 30%);
     color: hsl(204, 35%, 87%);
-    padding: 5px 15px 5px 15px;
-    margin: 15px auto 15px auto;
+    padding: 15px;
+    margin: 15px;
     box-shadow: 0 2px 10px 2px hsl(247, 28%, 15%); 
+    max-width: 900px;
 }
 
 /* ------ PANEL PRINCIPAL DE DETALLES DE PERFIL */
@@ -149,7 +149,7 @@ header {
 /* CONTENEDOR SUPERIOR DEL PANEL DE FOTOS */
 .contenedor-superior-fotos {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
 }
 
 /* FOTO DEL USUARIO */
@@ -162,16 +162,21 @@ header {
 
 /* WRAPPER DE CONTENEDOR DE BOTONES Y ETIQUETA */
 .wrapper-botones-y-etiqueta {
+    /* display: flex;
+    flex-flow: column nowrap;
+    margin-left: 0; */
+
     display: flex;
     flex-flow: column nowrap;
-    margin-left: 0;
+    justify-content: flex-end;
+    row-gap: 10px;
 }
 
 /* CONTENEDOR DE BOTONES PARA CAMBIAR FOTO */
 .contenedor-botones {
     display: flex;
     flex-flow: row nowrap;
-    
+    gap: 10px;
 
 }
 
@@ -179,7 +184,6 @@ header {
 .boton-destacado {
     display: flex;
     align-items: center;
-    margin: auto 15px auto 15px;
     padding: 15px;
     border-radius: 25px;
     background-color: hsl(303, 13%, 14%);
@@ -196,7 +200,6 @@ header {
 .boton-bordeado {
     display: flex;
     align-items: center;
-    margin: auto 15px auto 15px;
     padding: 15px;
     border: 2px solid;
     border-color: hsl(303, 13%, 9%);
@@ -213,7 +216,11 @@ header {
 }
 
 .formatos-permitidos {
-    padding-left: 15px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-style: italic;
+    color: hsl(0deg 0% 59%);
 }
 
 /* LINEA SEPARADORA DEL PANEL PRINCIPAL */
@@ -236,8 +243,6 @@ header {
 .item-tabla {
     width: 43%;
     padding: 20px 30px 20px 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .etiqueta-formulario {
@@ -303,61 +308,60 @@ footer {
 
 /* PARA NOTEBOOK/IPAD PRO */
 @media screen and (max-width: 1024px) {
-    .contenedor-panel {}
+
+    body {
+        font-size: 0.9em;
+    }
 }
 
 /* PARA TABLETS (IPAD) */
 
 @media only screen and (max-width: 768px) {
     .item-tabla {
-        width: 42%;
+        flex: 1 1 42%;
     }
-
 
     /* MENU PRINCIPAL */
 
     header {
+        border-bottom: 2px solid hsl(176, 55%, 55%);
         display: flex;
         flex-flow: row nowrap;
         flex: initial;
         width: 100%;
+        padding: 0px 10px;
     }
-
+    
     #menu {
         position: initial;
-
+    
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         flex: 1;
         max-width: none;
     }
-
+    
     .nav-hr {
         display: none;
         visibility: hidden;
     }
-
+    
     #logo {
         margin-left: auto;
     }
-
+    
     #menu button {
         display: none;
         visibility: hidden;
     }
-
-    #boton-menu {
-        display: block;
-        visibility: visible;
-    }
-
+    
     .opciones-perfil {
         padding: 0;
         flex-wrap: wrap;
         align-content: flex-end;
     }
-
+    
     .material-icons {
         font-size: 1.5rem;
     }
@@ -366,17 +370,37 @@ footer {
 
 /* PARA CELULARES */
 @media only screen and (max-width: 480px) {
-    .menu-superior{
-        flex-flow: column nowrap;
-        align-items: center;
+    main {
+        padding: 0 6%;
     }
+
+
+    .contenedor-panel {
+        margin: 10px 0;
+    }
+
+    .menu-superior{
+        flex-flow: row nowrap;
+    }
+
+    .menu-superior > button {
+        margin: 0;
+        padding: 8px;
+    }
+
+    .menu-superior > button:nth-last-child(-n+2) span.label {
+        display: none;
+        visibility: hidden;
+    }
+
     .contenedor-panel {
         padding-left: 0;
         padding-right: 0;
     }
 
     .titulo-perfil-detalles {
-        text-align: center;
+        text-align: flex-start;
+        margin: 0px 15px 15px;
     }
 
     .separador {
@@ -385,33 +409,47 @@ footer {
     }
 
     .contenedor-superior-fotos {
-        flex-flow: column nowrap;
+        flex-flow: row;
         align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 0 5%;
     }
 
     #foto-usuario {
         width: 80px;
         margin-right: 0;
+
+        position: relative;
+        bottom: 10px;
     }
 
     .wrapper-botones-y-etiqueta {
-        margin-left: 0;
-        
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
     }
     
     .contenedor-botones {
         flex-flow: column nowrap;
         align-items: center;
-        
+        gap: 5px;
     }
+
     .contenedor-botones > * {
-        margin-top: 15px;
-        margin-bottom: 15px;
         font-size: 0.9em;
+       
+    }
+
+    .boton-bordeado {
+        border: none;
+        text-decoration: underline;
+        padding: 0;
     }
 
     .formatos-permitidos {
         text-align: center;
+        font-size: 0.7em;
     }
 
     #tabla {
@@ -419,7 +457,13 @@ footer {
     }
 
     .item-tabla {
-        width: 80%;        
+        flex: 1 1 95%;        
+    }
+
+    #guardar-cancelar {
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 45px;
     }
 
    #desactivarCuenta {
@@ -439,6 +483,10 @@ footer {
     
     #advertencia-final {
         font-size: 0.8em;
+    }
+
+    #confirmarEliminar {
+        font-size: 0.83em;
     }
 
     

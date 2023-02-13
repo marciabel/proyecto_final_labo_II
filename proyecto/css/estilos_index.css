@@ -26,8 +26,7 @@ main {
 header {
     display: flex;
     flex-direction: column;
-    flex: 0 0 50px;
-    width: 55px;
+    flex: 0 0 55px;
     padding-top: 10px;
 
     /* ESTILOS */
@@ -503,7 +502,7 @@ div.etiqueta-al-dia {
     flex-direction: column;
     width: 26%;
     height: 150px;
-    gap: 10%;
+    gap: 12%;
 }
 
 .label-actividad > span{
@@ -886,6 +885,12 @@ div.etiqueta-acumulado {
 
 /* TABLET */
 @media screen and (max-width:767px) {
+
+    /* ESTILOS GENERALES */
+    main {
+        padding: 0px 5%;
+    }
+
     /* MENU PRINCIPAL */
 
     header {
@@ -990,10 +995,14 @@ div.etiqueta-acumulado {
 /* MOBILE */
 @media screen and (max-width:480px) {
 
-        /* ESTILOS GENERALES */
-        main {
-            padding: 0px 10%;
-            row-gap: 5px;
-        }
+    /* ESTILOS GENERALES */
+    main {
+        row-gap: 5px;
+    }
+
+    /* BARRA NAVEGACION - MENU */
+    #logo>img {
+        width: 35px;
+    }
 
 }
