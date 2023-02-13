@@ -26,7 +26,6 @@ header {
     color: hsl(204, 22%, 95%);
     background-color:hsl(0, 0%, 0%);
 
-    /* PARA PROBAR */
 
 }
 
@@ -313,8 +312,57 @@ footer {
     .item-tabla {
         width: 42%;
     }
-}
 
+
+    /* MENU PRINCIPAL */
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: initial;
+        width: 100%;
+    }
+
+    #menu {
+        position: initial;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        flex: 1;
+        max-width: none;
+    }
+
+    .nav-hr {
+        display: none;
+        visibility: hidden;
+    }
+
+    #logo {
+        margin-left: auto;
+    }
+
+    #menu button {
+        display: none;
+        visibility: hidden;
+    }
+
+    #boton-menu {
+        display: block;
+        visibility: visible;
+    }
+
+    .opciones-perfil {
+        padding: 0;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
+
+    .material-icons {
+        font-size: 1.5rem;
+    }
+    
+}
 
 /* PARA CELULARES */
 @media only screen and (max-width: 480px) {

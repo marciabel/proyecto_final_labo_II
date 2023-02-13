@@ -17,7 +17,6 @@ main {
     /* Estilos */
     background-color: hsl(233, 33%, 10%);
 
-    /* PARA PROBAR */
 
 
 }
@@ -35,7 +34,6 @@ header {
     color: hsl(204, 22%, 95%);
     background-color:hsl(0, 0%, 0%);
 
-    /* PARA PROBAR */
 
 }
 
@@ -365,21 +363,13 @@ div.tareas-completadas{
 
 
 /* PROGRESO */
-.detalle_progreso{
+
+.grafico-progreso {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 5px;
     color: hsl(0, 0%, 100%);
-}
-
-.grafico-progreso {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 5px;
-    color: hsl(0, 0%, 100%); */
-
     display: flex;
     flex-flow: row wrap;
     row-gap: 16px;
@@ -483,10 +473,6 @@ div.tareas-completadas{
 }
 
 
-    
-
-
-
 
 /*ACTIVIDAD*/
 div.etiqueta-adelantado {
@@ -545,13 +531,11 @@ div.etiqueta-al-dia {
 .lineas-actividad > div{
     
     position: relative;
-
     border-right: 1px white solid;
     border-left: 1px white solid;
     height: 100%;
     
 }
-
 
 
 
@@ -588,7 +572,6 @@ div.etiqueta-al-dia {
   
 
 }
-
 
 
 
@@ -657,7 +640,6 @@ div.etiqueta-al-dia {
 }
 
 
-
 .actividad2 > div.barra-adelantado{
     width: 0%;
 
@@ -672,7 +654,6 @@ div.etiqueta-al-dia {
     width: 0%;
 
 }
-
 
 
 .actividad3 > div.barra-adelantado{
@@ -707,10 +688,8 @@ div.etiqueta-presupuesto {
 
 .grafico-gastos {
     position: relative;
-
     display: flex;
     flex-direction: row;
-
     padding: 0px 0px 0px 10px;
 }
 
@@ -778,9 +757,6 @@ div.etiqueta-presupuesto {
 
 
 
-
-
-
 /*TRABAJO*/
 
 div.etiqueta-completado {
@@ -800,7 +776,6 @@ div.etiqueta-acumulado {
 
 .grafico-trabajo {
     position: relative;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -810,7 +785,6 @@ div.etiqueta-acumulado {
 .usuarios {
     display: flex;
     flex-direction: column;
-
     width: 20%;
     gap: 18px;
 }
@@ -818,20 +792,17 @@ div.etiqueta-acumulado {
 
 .valores-trabajo {
     display: flex;
-
     width: 80%;
 }
 
 .barras-verticales {
     display: flex;
-    gap: 20%;
-    
+    gap: 20%;    
     flex-grow: 1;
 }
 
 .barras-verticales > div {
     position: relative;
-
     border-right: 1px white solid;
     border-left: 1px white solid;
     height: 100%;
@@ -853,7 +824,6 @@ div.etiqueta-acumulado {
 
 .barra-progreso-trabajo {
     display: flex;
-
     width: 100%;
     height: 10%;
 } 
@@ -911,27 +881,20 @@ div.etiqueta-acumulado {
         min-width: 40%;
     }
 
-    
-
-
-
-
-
-
 }
 
 
 /* TABLET */
 @media screen and (max-width:767px) {
-    
-    
     /* MENU PRINCIPAL */
 
     header {
+        border-bottom: 2px solid hsl(176, 55%, 55%);
         display: flex;
         flex-flow: row nowrap;
         flex: initial;
         width: 100%;
+        padding: 0px 10px;
     }
 
     #menu {
@@ -975,13 +938,11 @@ div.etiqueta-acumulado {
  
 
     
-    
-    
     /* BARRA DE NAVEGACION SECUNDARIA */
     
     #navegacion-secundaria {
         justify-content: flex-start;
-        border-top: 2px solid hsl(176, 55%, 55%);
+        padding: 5px 0px;
     }
     
     #navegacion-secundaria > button:nth-child(-n+4) {
@@ -997,6 +958,7 @@ div.etiqueta-acumulado {
     #boton-nav-personalizar > span {
         border-radius: 12rem;
         padding: 2px;
+        margin-right: 5px;
 
         background-color:hsl(0, 0%, 100%) ;
         color: hsl(0, 0%, 0%);
@@ -1004,6 +966,11 @@ div.etiqueta-acumulado {
 
     #boton-nav-personalizar > span:hover {
         color: hsl(0, 0%, 61%);
+    }
+
+    #navegacion-secundaria > button {
+        font-size: 1em;
+        color: hsl(0, 0%, 100%);
     }
 
     /* CONTENEDORES INDIVIDUALES */
@@ -1018,20 +985,15 @@ div.etiqueta-acumulado {
     }
 
     
-    
-
-    
-
-
-    
 }
 
 /* MOBILE */
 @media screen and (max-width:480px) {
 
-
-
-
-
+        /* ESTILOS GENERALES */
+        main {
+            padding: 0px 10%;
+            row-gap: 5px;
+        }
 
 }
