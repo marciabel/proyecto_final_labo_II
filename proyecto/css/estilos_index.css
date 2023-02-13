@@ -70,6 +70,11 @@ header {
     border-radius: 10%;
 }
 
+#boton-menu {
+    display: none;
+    visibility: hidden;
+}
+
 .nav-hr {
     min-width: 30px;
     border: 1px solid hsl(204, 22%, 95%);
@@ -104,10 +109,6 @@ header {
     padding: 2px;
     width: 100%;
     max-height: 65px;
-
-    /* PARA PROBAR */
-
-    border: solid hsl(233, 21%, 16%) 1px;
 }
 
 #navegacion-secundaria > button {
@@ -123,6 +124,10 @@ header {
     border: hsl(73, 66%, 64%) solid 1px;
 }
 
+#boton-nav-personalizar {
+    display: none;
+    visibility: hidden;
+}
 
 /* ESTILO CONTENEDORES INDIVIDUALES GRAFICOS */
 
@@ -130,16 +135,12 @@ header {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-width: 30%;
 
     /* Estilos */
     font-size: 0.9em;
     color:hsl(204, 15%, 60%);
     border: solid hsl(233, 21%, 16%) 1px;
-
-
-    /* PARA PROBAR */
-
-    min-width: 30%;
 }
 
 .encabezado-contenedor-individual {
@@ -227,22 +228,21 @@ footer>p {
 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
-    gap: 5px;
+    gap: 1%;
     padding: 5px;
 }
 
 .etiquetas-tareas > p {
-    margin-right: auto;
+    margin-right: 5%;
+    text-align: center;
 }
 
 div.circulo-etiqueta {
     height: 12px;
     width: 12px;
     border-radius: 12rem;
-
-    /* background-color: yellow; */
 }
 
 div.tareas-no-empezadas {
@@ -373,17 +373,29 @@ div.tareas-completadas{
     color: hsl(0, 0%, 100%);
 }
 
+.grafico-progreso {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    color: hsl(0, 0%, 100%); */
+
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 16px;
+}
+
 .label_progreso{
-    width: 40%;
+    width: 30%;
 }
 
 .barra-progreso {
     display: flex;
     gap: 8px;
-    
     background-color: hsl(233, 33%, 10%);
-    width: 60%;
-    height: 15%;
+    min-width: 60%;
+    height: 20px;
+    flex: 1;
 }
 
 .barra-progreso > span {
@@ -493,61 +505,190 @@ div.etiqueta-al-dia {
 }
 
 .contenedor-grafico{
+    position: relative;
     display: flex;
-    height: 200px;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 10px;
 }
 
 .label-actividad {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    
+    width: 26%;
+    height: 150px;
+    gap: 10%;
 }
 
-.grafico-actividad{
-    width: 70%;
+.label-actividad > span{
+    height: 20%;
+}
 
+.valores-actividad{
+    display: flex;
+    width: 78%;
+    gap: 4.5px;
+
+}
+
+.valores-actividad > span{
+    width: 10%;
+    text-align: center;
 }
 
 .lineas-actividad{
     display: flex;
-    flex-direction: row;
-    height: 80%;
+    flex-grow: 1;
+    gap: 11%;
+}
+
+.lineas-actividad > div{
     
+    position: relative;
 
-}
-
-.lineas-actividad>div{
-    width: 20%;
-    border: 3px;
-    border-color: white;
+    border-right: 1px white solid;
+    border-left: 1px white solid;
+    height: 100%;
     
 }
 
-.valores-actividad
-
-.valores-actividad>span{
-    width: 100%;
 
 
-}
 
-/* .lineas-actividad {
-
-    position: relative;    
+.barra-actividad{
+    position: absolute;
     display: flex;
-    flex-direction: row;
-    width: 50px;
-    height: 200px;
-    align-items: flex-end;
+    width: 68%;
+    left: 26%;
+    height: 69%;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
 
-} */
+.barra-progreso-actividad{
+    display: flex;
+    position: relative;
+    left: 50%;
+    width: 51%;
+    height: 24%;
+}
+
+.barra-progreso-actividad:nth-child(1){
+     
+
+}
+
+.barra-progreso-actividad:nth-child(2){
+    left: 0%;
+    flex-direction: row-reverse;  
+    
+}
+
+.barra-progreso-actividad:nth-child(3){
+  
+
+}
 
 
-/**//**//**//**/
 
 
+.barra-adelantado{
+    background-color: hsl(207, 82%, 56%);
+
+}
+
+.barra-atrasado{
+    background-color: hsl(34, 74%, 57%);
+
+}
+
+.barra-al-dia{
+    background-color: hsl(119, 52%, 60%);
+
+}
+
+.actividad1 span{
+    position: absolute;
+    left: -20%;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.actividad2 span{
+    position: absolute;
+    left: -20%;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.actividad3 span{
+    position: absolute;
+    left: -20%;
+    font-size: 120%;
+    font-weight: bold;
+
+}
+
+.barra-atrasado span {
+    left: 100%;
+    color: hsl(34, 74%, 57%)
+}
+
+.barra-adelantado span {
+    color: hsl(207, 82%, 56%);
+}
+
+.barra-al-dia span{
+    color: hsl(119, 52%, 60%);
+}
+
+
+.actividad1 > div.barra-adelantado{
+    width: 14%;
+
+}
+.actividad1 > div.barra-atrasado{
+    width: 0%;
+
+}
+.actividad1 > div.barra-al-dia{
+    width: 0%;
+
+}
+
+
+
+.actividad2 > div.barra-adelantado{
+    width: 0%;
+
+}
+
+.actividad2 > div.barra-atrasado{
+    width: 50%;
+
+}
+
+.actividad2 > div.barra-al-dia{
+    width: 0%;
+
+}
+
+
+
+.actividad3 > div.barra-adelantado{
+    width: 0%;
+
+}
+
+.actividad3 > div.barra-atrasado{
+    width: 0%;
+
+}
+
+.actividad3 > div.barra-al-dia{
+    width: 30%;
+
+}
 
 
 /*GASTOS*/
@@ -755,4 +896,142 @@ div.etiqueta-acumulado {
 
 .progreso-george > div.trabajo-restante {
     width: 12.5%;
+}
+
+
+/* MEDIA QUERIES */
+
+/* NOTEBOOK */
+@media screen and (max-width:1024px) {
+    body {
+        font-size: 0.9em;
+    }
+    
+    .contenedor-individual {
+        min-width: 40%;
+    }
+
+    
+
+
+
+
+
+
+}
+
+
+/* TABLET */
+@media screen and (max-width:767px) {
+    
+    
+    /* MENU PRINCIPAL */
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: initial;
+        width: 100%;
+    }
+
+    #menu {
+        position: initial;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        flex: 1;
+        max-width: none;
+    }
+
+    .nav-hr {
+        display: none;
+        visibility: hidden;
+    }
+
+    #logo {
+        margin-left: auto;
+    }
+
+    #menu button {
+        display: none;
+        visibility: hidden;
+    }
+
+    #boton-menu {
+        display: block;
+        visibility: visible;
+    }
+
+    .opciones-perfil {
+        padding: 0;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
+
+    .material-icons {
+        font-size: 1.5rem;
+    }
+ 
+
+    
+    
+    
+    /* BARRA DE NAVEGACION SECUNDARIA */
+    
+    #navegacion-secundaria {
+        justify-content: flex-start;
+        border-top: 2px solid hsl(176, 55%, 55%);
+    }
+    
+    #navegacion-secundaria > button:nth-child(-n+4) {
+        display: none;
+        visibility: hidden;
+    }
+
+    #boton-nav-personalizar {
+        display: initial;
+        visibility: visible;
+    }
+
+    #boton-nav-personalizar > span {
+        border-radius: 12rem;
+        padding: 2px;
+
+        background-color:hsl(0, 0%, 100%) ;
+        color: hsl(0, 0%, 0%);
+    }
+
+    #boton-nav-personalizar > span:hover {
+        color: hsl(0, 0%, 61%);
+    }
+
+    /* CONTENEDORES INDIVIDUALES */
+    
+    .contenedor-individual {
+        min-width: 80%;
+    }
+
+    .encabezado-contenedor-individual > button.expandir {
+        display: none;
+        visibility: hidden;
+    }
+
+    
+    
+
+    
+
+
+    
+}
+
+/* MOBILE */
+@media screen and (max-width:480px) {
+
+
+
+
+
+
 }

@@ -25,11 +25,13 @@
   </head>
   <body>
     <header>
+      
       <nav id="menu">
+        
         <a id="logo" href="index.html"><img src="img/logo.png" alt="Logo de 'LOREM'"></a>
-
+        
         <hr class="nav-hr" id="separacion-menu-1" />
-
+        
         <button class="nav-boton" title="Inicio">
           <span class="material-icons">home</span>
         </button>
@@ -45,13 +47,13 @@
         <button class="nav-boton" title="Trabajo">
           <span class="material-icons">work_outline</span>
         </button>
-
+        
         <!-- OPCIONES DEL PERFIL  -->
         <div class="opciones-perfil">
           <button class="nav-boton" title="Agregar contacto">
             <span class="material-icons">add</span>
           </button>
-
+          
           <button class="nav-boton" title="Ayuda">
             <span class="material-icons">help_outline</span>
           </button>
@@ -59,8 +61,11 @@
           <a href="perfil.html" class="nav-boton" title="Perfil">
             <span class="material-icons">account_circle</span>
           </a>
-        </div>
+        </div>       
       </nav>
+      <button class="nav-boton" id="boton-menu" title="Menu">
+        <span class="material-icons">menu</span>
+      </button>
     </header>
     <main>
       <!-- Barra de navegación "filtro"-->
@@ -76,6 +81,10 @@
         </button>
         <button class="boton-nav" title="Agregar otra vista">
           <span class="material-icons">addchart</span>
+        </button>
+
+        <button class="boton-nav" id="boton-nav-personalizar" title="Seleccionar vista">
+          <span class="material-icons">palette</span>
         </button>
       </nav>
 
@@ -162,36 +171,38 @@
         </div>
         <div class="detalle detalle_progreso">
 
-          <div class="label_progreso">Contratos</div>
+          <div class="grafico-progreso">
+
+                      <div class="label_progreso">Contratos</div>
           <div class="barra-progreso">
             <span id="progreso-contratos">100%</span><div class="progresos-contratos"> <div></div> </div>
           </div>
 
-          <label class="label_progreso" for="diseño">Diseño</label>
+          <div class="label_progreso">Diseño</div>
           <div class="barra-progreso">
             <span id="progreso-diseño">80%</span><div class="progresos-diseño"> <div></div> </div>            
           </div>
 
-          <label class="label_progreso" for="adquisiciones"
-            >Adquisiciones</label>
+          <div class="label_progreso">Adquisiciones</div>
           <div class="barra-progreso">
             <span id="progreso-adquisiciones">19%</span><div class="progresos-adquisiciones"> <div></div> </div>
           </div>
 
-          <label class="label_progreso" for="construccion">Construcción</label>
+          <div class="label_progreso">Construcción</div>
           <div class="barra-progreso">
             <span id="progreso-construccion">0%</span><div class="progresos-construccion"> <div></div> </div>
           </div>
 
-          <label class="label_progreso" for="post_contruccion"
-            >Post Construcción</label>
+          <div class="label_progreso">Post Construcción</div>
           <div class="barra-progreso">
             <span id="progreso-post-construccion">0%</span><div class="progresos-post-construccion"> <div></div> </div>
           </div>
-          <label class="label_progreso" for="fin_proyecto"
-            >Finalizacion de Proyecto</label>
+          <div class="label_progreso">Finalizacion de Proyecto</div>
           <div class="barra-progreso">
             <span id="progreso-finalizacion-proyecto">0%</span><div class="progresos-fin-proyecto"> <div></div> </div>
+          </div>
+
+
           </div>
         </div>
       </div> 
@@ -220,31 +231,48 @@
               <span>Ahead</span>
             </div>
 
-            <div class="grafico-actividad">
-              <div class="lineas-actividad">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-
-              <div class="valores-actividad">
-                <span>100</span>
-                <span>75</span>
-                <span>50</span>
-                <span>25</span>
-                <span>0</span>
-                <span>25</span>
-                <span>50</span>
-                <span>75</span>            
-                <span>100</span>
-              </div>
+            
+            <div class="lineas-actividad">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
+
+            <div class="valores-actividad">
+              <span>100</span>
+              <span>75</span>
+              <span>50</span>
+              <span>25</span>
+              <span>0</span>
+              <span>25</span>
+              <span>50</span>
+              <span>75</span>            
+              <span>100</span>
+            </div>
+
+            <div class="barra-actividad">
+              <div class="barra-progreso-actividad actividad1">
+                <div class="barra-adelantado"><span> 14%</span></div>
+                <div class="barra-atrasado"><span></span></div>
+                <div class="barra-al-dia"><span></span></div>
+              </div>
+              <div class="barra-progreso-actividad actividad2">
+                <div class="barra-adelantado"><span></span></div>
+                <div class="barra-atrasado"><span>50%</span></div>
+                </span><div class="barra-al-dia"><span></span></div>
+              </div>
+              <div class="barra-progreso-actividad actividad3">
+                <div class="barra-adelantado"><span></span></div>
+                <div class="barra-atrasado"><span></span></div>
+                <div class="barra-al-dia"><span>30%</span></div>
+              </div>
+            </div>  
 
           </div>
           
@@ -369,12 +397,51 @@
                 <div class="trabajo-atrasado"></div>
               </div>
             </div>
-            
+          </div>
+        </div>
+      </div>
+
+      <div class="contenedor-individual">
+        <div class="encabezado-contenedor-individual">
+          <h2 class="titulo-categoria">Gastos</h2>
+          <button class="ayuda" title="Ayuda">
+            <span class="material-icons">help_outline</span>
+          </button>
+          <button class="expandir" title="Expandir">
+            <span class="material-icons">settings_overscan</span>
+          </button>
+        </div>
+        <div class="detalle-gastos detalle">
+          <div class="etiquetas-tareas">
+            <div class="circulo-etiqueta etiqueta-historico"></div><p>Histórico</p>
+            <div class="circulo-etiqueta etiqueta-planeado"></div><p>Planeado</p>
+            <div class="circulo-etiqueta etiqueta-presupuesto"></div><p>Presupuesto</p>        
           </div>
 
-          
-          
-          
+          <div class="grafico-gastos"> 
+            <div class="valores-gastos">
+              <span class="valor-grafico-gastos">8K </span>
+              <hr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+              <span class="valor-grafico-gastos">6K </span>
+              <hr>
+              <span class="valor-grafico-gastos">4K </span>
+              <hr>
+              <span class="valor-grafico-gastos">2K </span>
+              <hr>
+              <span class="valor-grafico-gastos">0 </span>
+              <hr>
+            </div>
+            
+            <div class="columna-grafico-barras columna-historico">
+              <div></div>
+            </div>
+            <div class="columna-grafico-barras columna-planeado">
+              <div></div>
+            </div>
+            <div class="columna-grafico-barras columna-presupuesto">
+              <div></div>
+            </div>
+          </div>
         </div>
       </div>
 
